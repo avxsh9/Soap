@@ -1,0 +1,330 @@
+/* Base Styles */
+:root {
+    --primary-font: 'Inter', sans-serif;
+    --display-font: 'Playfair Display', serif;
+    --main-color: #2c2c2c; /* Near black for strong contrast */
+    --light-color: #f8f8f8; /* Off-white for background */
+    --accent-color: #7A9B76; /* Subtle green for sustainable look (Ginger & Lime tone) */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--main-color);
+    background-color: white; /* Pure white background */
+    line-height: 1.6;
+}
+
+/* --- HEADER STYLES --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee; /* Subtle separator */
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo-main {
+    font-family: var(--display-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    margin-top: -5px;
+    color: var(--accent-color); /* Highlight brand identity */
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.nav a:hover {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.cart-icon svg {
+    cursor: pointer;
+}
+
+/* --- HERO SECTION STYLES --- */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* Mimics the subtle background texture/water effect */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity=".1" fill="#FFFFFF"><filter id="a"><feTurbulence baseFrequency="0.05 0.05" numOctaves="3" seed="0" type="fractalNoise"/></filter><rect width="100%" height="100%" filter="url(#a)"/></svg>') top left / cover no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.hero-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    position: relative; 
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.hero-title {
+    font-family: var(--primary-font);
+    font-size: 5rem; 
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    animation: fadeInSlide 1s ease-out;
+}
+
+/* CTA Styles */
+.hero-cta {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.hero-cta span {
+    margin-left: 5px;
+}
+
+.cta-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: transform 0.3s ease-out;
+    transform-origin: left;
+}
+
+.hero-cta:hover .cta-line {
+    transform: scaleX(0.8);
+    background-color: var(--accent-color);
+}
+
+/* Image Container Styles */
+.hero-image-container {
+    flex: 1;
+    max-width: 50%;
+    min-height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* UPDATED: Increased Padding to make the white box look bigger/cleaner */
+.image-inner-box {
+    background-color: var(--light-color); 
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05); 
+    overflow: hidden;
+}
+
+/* UPDATED: Increased image dimensions */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 500px; /* Increased width */
+    height: 500px; /* Increased height */
+    object-fit: contain; 
+}
+
+/* --- PLACEHOLDER SECTION STYLES --- */
+.section-placeholder {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.section-placeholder h3 {
+    font-family: var(--display-font);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- NEW FRAGRANCE SECTION STYLES --- */
+.fragrance-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.fragrance-title {
+    font-family: var(--display-font);
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.fragrance-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.fragrance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fragrance-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.fragrance-card h4 {
+    color: var(--accent-color);
+    font-family: var(--display-font);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.fragrance-card:hover {
+    box-shadow: 0 10px 30px rgba(122, 155, 118, 0.15); /* Accent color shadow on hover */
+    transform: translateY(-5px);
+}
+
+
+/* --- RESPONSIVENESS (Mobile First) --- */
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+    .nav {
+        order: 3; 
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+    .hero {
+        padding: 30px 20px;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-text, .hero-image-container {
+        max-width: 100%;
+    }
+    .hero-title {
+        font-size: 3.5rem; 
+        margin-bottom: 20px;
+    }
+    .hero-text {
+        order: 2; 
+        padding-right: 0;
+    }
+    .hero-image-container {
+        order: 1;
+        min-height: auto;
+    }
+    .image-inner-box {
+        padding: 30px;
+    }
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+    .feature-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .fragrance-grid {
+        grid-template-columns: 1fr; /* Stack fragrance cards on mobile */
+    }
+}
+
+
+/* --- ANIMATIONS (CSS-Only) --- */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
