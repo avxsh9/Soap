@@ -1,84 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <title>GINGER & LIME | Organic Natural Soap</title>
-    <meta name="description" content="GINGER & LIME: The organic natural bar soap that your body loves. Handcrafted, zero-waste, pure joy.">
-    <meta property="og:image" content="Untitled design (13).png">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tamsi — Organic Natural Soap</title>
+  <meta name="description" content="Tamsi: Organic, handmade soap. Bar soap that your body loves. Discover Lemon, Pink Rose, Neem, and Aloe Vera fragrances." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header class="header">
-        <div class="logo">
-            <h1 class="logo-main">GINGER & LIME</h1>
-            <p class="logo-sub">ORGANIC NATURAL SOAP</p>
-        </div>
-        <nav class="nav">
-            <a href="#home">Home</a>
-            <!-- <a href="#why">Why Us</a>
-            <a href="#products">Soaps</a> -->
-            <a href="#fragrance">Fragrances</a>
-            <!-- <a href="#ingredients">Ingredients</a>
-            <a href="#contact">Contact</a> -->
-        </nav>
-        <!-- <div class="cart-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-        </div> -->
-    </header>
-
-    <section class="hero" id="home">
-        <div class="hero-bg-overlay"></div> 
-        
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2 class="hero-title">
-                    The bar soap<br>that your<br>body loves.
-                </h2>
-                
+        <div class="header-content container">
+      
+          <a href="#home" class="brand">
+            <img src="Untitled design (15).png" alt="Tamsi Logo" class="brand-logo">
+            <div class="brand-text">
+              <div class="brand-name">Tamsi</div>
+              <div class="brand-sub">ORGANIC NATURAL SOAP</div>
             </div>
-
-            <div class="hero-image-container">
-                <div class="image-inner-box">
-                    <img src="Untitled_design__13_-removebg-preview.png" alt="Collection of Ginger & Lime bar soaps" class="hero-image" loading="eager">
-                </div>
-            </div>
+          </a>
+      
+          <nav class="nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#product-showcase" class="nav-link">Product</a>
+            <a href="#fragrance" class="nav-link">Fragrances</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+      
+          <button class="menu-btn" aria-label="Open menu">
+           
+          </button>
+      
         </div>
+      </header>
+      
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section container reveal-section">
+      <div class="hero-left">
+        <h1 class="hero-title">The bar soap<br>that your<br>body loves.</h1>
+        <p class="hero-lead">Handmade • Organic • Small-batch • Skin-friendly</p>
+        <div class="hero-cta-row">
+          <a class="hero-btn primary-btn" href="#product-showcase">Explore Soaps</a>
+          <a class="hero-btn ghost-btn" href="#fragrance">Our Fragrances</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="image-frame">
+          <img src="Untitled_design__13_-removebg-preview.png" alt="Tamsi Lemon soap bar" class="product-image current-product-image">
+        </div>
+      </div>
     </section>
 
-    <section id="features" class="section-placeholder">
-        <h3>Pure, Simple, Effective</h3>
-        <p>Handcrafted with love. Earth-friendly, skin-loving, zero-waste products. Simple, effective, pure joy.</p>
-        <div class="feature-grid">
-            <div class="feature-card">🌱 Natural Ingredients</div>
-            <div class="feature-card">💧 Hydrating Formulas</div>
-            <div class="feature-card">🌍 Zero Waste</div>
-        </div>
-    </section>
+    <!-- PRODUCT SHOWCASE / SLIDESHOW -->
+    <section id="product-showcase" class="product-showcase-section container reveal-section">
+      <h2 class="section-title">Our Signature Soaps</h2>
+      <p class="section-subtitle">Discover the perfect blend of nature and care for your skin.</p>
 
-    <section id="fragrance" class="fragrance-section">
-        <div class="fragrance-content">
-            <h3 class="fragrance-title">A scent for every mood.</h3>
-            <p class="fragrance-subtitle">Discover our signature collection of unique, natural fragrances.</p>
-            <div class="fragrance-grid">
-                <div class="fragrance-card">
-                    <h4>🍊 Ginger & Lime</h4>
-                    <p>The original boost. Zesty, fresh, and energizing start to your day.</p>
-                </div>
-                <div class="fragrance-card">
-                    <h4>🌿 Lavender Dream</h4>
-                    <p>Calm and soothing. Perfect for a relaxing evening shower.</p>
-                </div>
-                <div class="fragrance-card">
-                    <h4>🥥 Coconut Delight</h4>
-                    <p>Creamy, tropical moisture. A mini-vacation in your shower.</p>
-                </div>
+      <div class="product-carousel">
+        <button class="carousel-nav prev-btn" aria-label="Previous soap">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel-content">
+          <div class="label-grid">
+            <div class="label-main surface-card">
+              <div class="brand-mark">Tamsi</div>
+              <h3 class="product-title current-product-name">Lemon</h3>
+              <div class="product-sub current-product-tagline">Organic Natural Soap — 100% Handmade</div>
+              <div class="badge">Approx. 100GSM</div>
+
+              <article class="about">
+                <h4>About Soap</h4>
+                <p class="current-product-description">Lemon Soap is rich in Vitamin C and antioxidants that refresh and brighten your skin. The tangy aroma of lemon uplifts your mood and leaves your skin feeling fresh, clean, and energized all day.</p>
+              </article>
+
+              <article class="ingredients">
+                <h4>Key Ingredients</h4>
+                <ul class="current-product-ingredients">
+                  <li>Purified Water</li>
+                  <li>Lemon Extract</li>
+                  <li>Glycerin</li>
+                  <li>Coconut Oil</li>
+                  <li>Castor Oil</li>
+                  <li>Natural Essential Oils</li>
+                  <li>Soap Base</li>
+                </ul>
+              </article>
+
+              <article class="manufacture">
+                <h4>Manufactured & Packed by</h4>
+                <address>
+                  M 5 & 6 Shyam Nagar<br>
+                  New Delhi 110018
+                </address>
+              </article>
+
+              <div class="label-tag">BAR SOAP THAT YOUR BODY LOVES</div>
             </div>
+
+            <aside class="label-side surface-card">
+              <div class="contact-card">
+                <h4>Brand & Contact</h4>
+                <p><strong>Tamsi</strong></p>
+                <p>Phone: +91 85299 89105</p>
+                <p>Email: tamasi@gmail.com</p>
+              </div>
+
+              <div class="product-info-small">
+                <div><strong>Net Wt:</strong> Approx. 100GSM</div>
+                <div style="margin-top:8px"><strong>Form:</strong> Bar Soap</div>
+              </div>
+            </aside>
+          </div>
         </div>
+        <button class="carousel-nav next-btn" aria-label="Next soap">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-dots"></div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- FRAGRANCES COLLECTION -->
+    <section id="fragrance" class="fragrance-section container reveal-section">
+      <h2 class="section-title">Fragrance Collection</h2>
+      <p class="section-subtitle">Small-batch curated scents for every mood.</p>
+
+      <div class="fr-grid">
+        <div class="fr-card" data-fragrance-index="0">
+          <h4><i class="fas fa-lemon icon-glow"></i> Lemon Zest</h4>
+          <p>Zesty and energizing — the original boost.</p>
+        </div>
+        <div class="fr-card" data-fragrance-index="1">
+          <h4><i class="fas fa-rose icon-glow"></i> Pink Rose</h4>
+          <p>Gentle and hydrating — a touch of floral elegance.</p>
+        </div>
+        <div class="fr-card" data-fragrance-index="2">
+          <h4><i class="fas fa-leaf icon-glow"></i> Neem Purify</h4>
+          <p>Purifying and antibacterial — for clear, healthy skin.</p>
+        </div>
+        <div class="fr-card" data-fragrance-index="3">
+          <h4><i class="fas fa-envira icon-glow"></i> Aloe Vera Calm</h4>
+          <p>Calming and moisturizing — soothing relief for sensitive skin.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section container reveal-section">
+      <h2 class="section-title">Connect With Us</h2>
+      <p class="section-subtitle">Questions, bulk orders, collabs — reach out using the details below.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card surface-card">
+          <h4>Tamsi</h4>
+          <p>Address: M 5 & 6 Shyam Nagar, New Delhi 110018</p>
+          <p>Phone: <a href="tel:+918529989105">+91 85299 89105</a></p>
+          <p>Email: <a href="mailto:tamasi@gmail.com">tamsi@gmail.com</a></p>
+        </div>
+
+        <div class="contact-illustration" aria-hidden="true">
+          <!-- Placeholder for a subtle illustration or pattern -->
+          <img src="view-kid-practicing-health-wellness-activity.jpg" alt="Abstract botanical illustration" class="illustration-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div>© <span id="year"></span> Tamsi — Bar soap that your body loves.</div>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#fragrance">Fragrances</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
