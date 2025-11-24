@@ -163,6 +163,12 @@
     backdrop-filter: blur(6px);
   }
   
+
+  .contact-card p {
+    white-space: nowrap;
+  }
+
+  
   .header-content {
     display: flex;
     align-items: center;
