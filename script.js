@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // --- Data for Soaps ---
     const soaps = [
         {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Purified Water", "Lemon Extract", "Glycerin", "Coconut Oil",
                 "Castor Oil", "Natural Essential Oils", "Soap Base"
             ],
-            image: "Untitled_design__13_-removebg-preview.png"
+            image: "gallery-1.jpg"
         },
         {
             name: "Pink Rose",
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Purified Water", "Rose Extract", "Glycerin", "Coconut Oil",
                 "Castor Oil", "Natural Essential Oils", "Soap Base"
             ],
-            image: "Untitled_design__13_-removebg-preview.png"
+            image: "gallery-2.jpg"
         },
         {
             name: "Neem Purify",
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Purified Water", "Neem Extract", "Glycerin", "Coconut Oil",
                 "Castor Oil", "Natural Essential Oils", "Soap Base"
             ],
-            image: "Untitled_design__13_-removebg-preview.png"
+            image: "gallery-3.jpg"
         },
         {
             name: "Aloe Vera Calm",
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Purified Water", "Aloe Vera Extract", "Glycerin", "Coconut Oil",
                 "Castor Oil", "Natural Essential Oils", "Soap Base"
             ],
-            image: "Untitled_design__13_-removebg-preview.png"
+            image: "gallery-1.jpg"
         }
     ];
 
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scroll for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fragrance card click to jump to slide
     frCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             const index = parseInt(this.dataset.fragranceIndex);
             showSlide(index);
             document.querySelector('#product-showcase').scrollIntoView({
