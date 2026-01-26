@@ -564,3 +564,118 @@
     object-fit: cover;
     transition: opacity 0.5s ease;
 }
+/* ---------------------------------
+   Gallery Section
+   --------------------------------- */
+.gallery-section {
+    padding: 100px 0;
+    background-color: var(--surface);
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    perspective: 1000px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    cursor: pointer;
+    aspect-ratio: 3/4;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay i {
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 50%;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay i {
+    transform: translateY(0);
+}
+
+/* ---------------------------------
+   Premium Enhancements
+   --------------------------------- */
+/* Subtle background texture */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Enhanced Typography */
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+}
+
+/* Glassmorphism touches */
+.surface-card, .fr-card, .contact-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
